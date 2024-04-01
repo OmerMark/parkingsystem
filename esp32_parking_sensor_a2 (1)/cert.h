@@ -1,5 +1,5 @@
-const char* mqtt_username = "tester";
-const char* mqtt_password = "omerTest1";
+const char* mqtt_username = "iotfinalproject";
+const char* mqtt_password = "Iiotfinalproject1";
 
 static const char *root_ca PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----
