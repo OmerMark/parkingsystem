@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -4.9,
+      "left": -312.2,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -82.4, "left": -210.1, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb2", "top": -82.4, "left": -354.1, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "rgb1:COM", "green", [ "v0", "h201.3" ] ],
+    [ "rgb1:R", "esp:D19", "green", [ "v0" ] ],
+    [ "rgb1:G", "esp:D5", "green", [ "v0" ] ],
+    [ "rgb1:B", "esp:D2", "green", [ "v0" ] ],
+    [ "rgb2:B", "esp:D32", "green", [ "v0" ] ],
+    [ "rgb2:R", "esp:D13", "green", [ "v0" ] ],
+    [ "rgb2:G", "esp:D26", "green", [ "v0" ] ],
+    [ "rgb2:COM", "esp:3V3", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
